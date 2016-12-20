@@ -1,6 +1,11 @@
+import 'jsdom-global/register';
+import chai, { expect } from 'chai';
+import chaiEnzyme from 'chai-enzyme';
 import React from 'react';
 import { shallow } from 'enzyme';
 import CommentBox from '../CommentBox';
+
+chai.use(chaiEnzyme());
 
 describe('CommentBox', () => {
   let component;
@@ -10,14 +15,14 @@ describe('CommentBox', () => {
   });
 
   it('has the correct class', () => {
-    expect(component.hasClass('comment-box')).toBe(true);
+    expect(component).to.have.className('comment-box');
   });
 
   it('has a text area', () => {
-    expect(component.find('textarea').length).toBe(1);
+    expect(component.find('textarea')).to.exist;
   });
 
   it('has a button', () => {
-    expect(component.find('button').length).toBeTruthy();
+    expect(component.find('button')).to.exist;
   });
 });
