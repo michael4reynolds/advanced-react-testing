@@ -1,3 +1,5 @@
+### Installed via generator-wallaby-webpack-react
+
 # Getting started
 
 ## npm
