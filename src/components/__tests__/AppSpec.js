@@ -2,7 +2,7 @@ import 'jsdom-global/register';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import App from '../App';
 
 chai.use(chaiEnzyme());

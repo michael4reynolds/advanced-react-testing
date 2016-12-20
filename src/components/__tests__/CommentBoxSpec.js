@@ -2,7 +2,7 @@ import 'jsdom-global/register';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import CommentBox from '../CommentBox';
 
 chai.use(chaiEnzyme());
@@ -11,7 +11,7 @@ describe('CommentBox', () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<CommentBox/>);
+    component = mount(<CommentBox/>);
   });
 
   it('has the correct class', () => {
@@ -24,5 +24,16 @@ describe('CommentBox', () => {
 
   it('has a button', () => {
     expect(component.find('button')).to.exist;
+  });
+
+
+  describe('entering some text', () => {
+    beforeEach(() => {
+      component.find('textarea').simulate('change', { target: { value: 'new comment' } });
+    });
+
+    it('shows that text in the textarea', () => {
+      expect(component.find('textarea')).to.have.text('new comment');
+    });
   });
 });
