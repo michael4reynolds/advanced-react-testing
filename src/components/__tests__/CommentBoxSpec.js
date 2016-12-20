@@ -35,5 +35,10 @@ describe('CommentBox', () => {
     it('shows that text in the textarea', () => {
       expect(component.find('textarea')).to.have.text('new comment');
     });
+
+    it('when submitted, clears the input', () => {
+      component.simulate('submit');
+      expect(component.find('textarea')).to.have.text('');
+    });
   });
 });
