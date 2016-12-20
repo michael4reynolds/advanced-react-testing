@@ -45,9 +45,13 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.6.1",
     "enzyme": "^2.4.1",
     "enzyme-redux": "^0.1.6",
     "immutable": "^3.8.1",
+    "jsdom": "^9.9.1",
+    "jsdom-global": "^2.1.0",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-immutable-proptypes": "^2.1.0",
