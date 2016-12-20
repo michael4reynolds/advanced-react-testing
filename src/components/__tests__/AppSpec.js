@@ -1,11 +1,16 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import App from '../App';
 
 
 describe('App', () => {
-  it('shows the correct text', () => {
-    const component = shallow(<App />);
-    expect(component.text()).toBe('React simple starter');
+  let component;
+  beforeEach(() => {
+    component = shallow(<App/>);
+  });
+  it('shows a comment box', () => {
+    expect(component.find('CommentBox').length).toBe(1);
+    component = mount(<App/>);
+    expect(component.find('.comment-box').length).toBeGreaterThan(0);
   });
 });
