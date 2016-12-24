@@ -15,13 +15,17 @@ describe('App', () => {
   let component;
 
   beforeEach(() => {
-    component = mount(<App/>);
+    const store = createStore(reducers);
+    component = mount(
+      <Provider store={store}>
+        <App/>
+      </Provider>,
+      );
   });
 
   it('shows a comment box', () => {
-    expect(component.find('.comment-box')).toExist;
+    expect(component.find('.comment-box'));
   });
-
 
   it('shows a comment list', () => {
     expect(component.find('.comment-list')).to.exist;
@@ -30,6 +34,7 @@ describe('App', () => {
 
 describe('app', () => {
   let app;
+
   beforeEach(() => {
     const store = createStore(reducers);
     app = shallow(
@@ -40,6 +45,6 @@ describe('app', () => {
   });
 
   it('renders', () => {
-    expect(app.find('App')).toBeDefined;
+    expect(app.find('App32')).toBeDefined;
   });
 });
