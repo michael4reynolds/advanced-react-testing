@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 export class CommentBox extends Component {
-  propTypes = {
+  static propTypes = {
     saveComment: PropTypes.string.isRequired,
   }
 
