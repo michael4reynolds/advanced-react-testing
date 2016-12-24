@@ -2,7 +2,7 @@ import 'jsdom-global/register';
 import React from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import { CommentList } from '../CommentList';

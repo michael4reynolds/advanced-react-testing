@@ -10,14 +10,7 @@
   },
   "parser": "babel-eslint",
   "rules": {
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "**/*Spec.js*"
-        ]
-      }
-    ],
+    "react/forbid-prop-types": "off",
     "react/jsx-space-before-closing": 0,
     "react/jsx-filename-extension": 0,
     "react/prefer-stateless-function": 0
