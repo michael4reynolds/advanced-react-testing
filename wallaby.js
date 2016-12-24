@@ -1,6 +1,9 @@
 module.exports = function (wallaby) {
   return {
-    files: ['src/**/*.js*', '!src/**/__tests__/*.js*'],
+    files: [
+      'src/**/*.js*',
+      '!src/**/__tests__/*.js*',
+      { pattern: 'src/**/__tests__/**/*.snap' }],
 
     tests: ['src/**/__tests__/*.js*'],
 
@@ -13,6 +16,6 @@ module.exports = function (wallaby) {
       runner: 'node',
     },
 
-    // testFramework: 'jest',
+    testFramework: 'mocha',
   };
 };
