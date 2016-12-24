@@ -2,8 +2,11 @@ import 'jsdom-global/register';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import React from 'react';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
-import CommentBox from '../CommentBox';
+import CommentBoxConnect from '../CommentBox';
+import reducers from '../../reducers';
 
 chai.use(chaiEnzyme());
 
@@ -11,7 +14,13 @@ describe('CommentBox', () => {
   let component;
 
   beforeEach(() => {
-    component = mount(<CommentBox/>);
+    const props = {};
+    const state = {};
+    component = mount(
+      <Provider store={createStore(reducers, state)}>
+        <CommentBoxConnect {...props}/>
+      </Provider>,
+    );
   });
 
   it('has the correct class', () => {
