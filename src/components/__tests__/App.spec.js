@@ -8,7 +8,6 @@ import { Provider } from 'react-redux';
 import App from '../App';
 import reducers from '../../reducers';
 
-
 chai.use(chaiEnzyme());
 
 describe('App', () => {
@@ -45,6 +44,6 @@ describe('app', () => {
   });
 
   it('renders', () => {
-    expect(app.find('App32')).toBeDefined;
+    expect(app.find('App')).toBeDefined;
   });
 });
