@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import commentReducer from '../comments';
 import { SAVE_COMMENT } from '../../actions/types';
 

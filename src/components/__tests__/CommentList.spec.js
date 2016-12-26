@@ -1,14 +1,9 @@
-import 'jsdom-global/register';
 import React from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
-import chai, { expect } from 'chai';
-import chaiEnzyme from 'chai-enzyme';
 import { CommentList } from '../CommentList';
 import reducers from '../../reducers';
-
-chai.use(chaiEnzyme());
 
 describe('app', () => {
   let component;

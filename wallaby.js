@@ -1,5 +1,4 @@
-module.exports = function (wallaby) {
-  return {
+module.exports = wallaby => ({
     files: [
       'src/**/*.js*',
       '!src/**/__tests__/*.js*',
@@ -16,6 +15,5 @@ module.exports = function (wallaby) {
       runner: 'node',
     },
 
-    testFramework: 'mocha',
-  };
-};
+  testFramework: 'jest',
+});

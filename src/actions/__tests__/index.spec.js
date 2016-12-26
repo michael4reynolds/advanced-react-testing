@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import { SAVE_COMMENT } from '../types';
 import { saveComment } from '../../actions';
 
