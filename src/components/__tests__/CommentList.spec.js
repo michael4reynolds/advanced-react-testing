@@ -18,11 +18,11 @@ describe('app', () => {
   });
 
   it('show an LI for each comment', () => {
-    expect(component.find('li').length).to.equal(2);
+    expect(component.find('li').length).toBe(2);
   });
 
   it('shows each comment that is provided', () => {
-    expect(component.find('li').at(0).text()).equals('New Comment');
-    expect(component.find('li').at(1).text()).equals('Other New Comment');
+    expect(component.find('li').at(0).text()).toBe('New Comment');
+    expect(component.find('li').at(1).text()).toBe('Other New Comment');
   });
 });

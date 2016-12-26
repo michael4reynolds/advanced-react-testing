@@ -18,11 +18,13 @@ describe('App', () => {
   });
 
   it('shows a comment box', () => {
-    expect(component.find('.comment-box')).to.exist;
+    expect(component.find('.comment-box')).not.toBeNull();
+    expect(component.find('.comment-box').length).toBeGreaterThan(0);
   });
 
   it('shows a comment list', () => {
-    expect(component.find('.comment-list')).to.exist;
+    expect(component.find('.comment-list')).not.toBeNull();
+    expect(component.find('.comment-list').length).toBeGreaterThan(0);
   });
 });
 
@@ -39,6 +41,7 @@ describe('app', () => {
   });
 
   it('renders', () => {
-    expect(app.find('App')).to.exist;
+    expect(app.find('App')).not.toBeNull();
+    expect(app.find('App').length).toBeGreaterThan(0);
   });
 });
