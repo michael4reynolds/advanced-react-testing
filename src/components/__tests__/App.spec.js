@@ -23,7 +23,7 @@ describe('App', () => {
   });
 
   it('shows a comment box', () => {
-    expect(component.find('.comment-box'));
+    expect(component.find('.comment-box')).to.exist;
   });
 
   it('shows a comment list', () => {
@@ -44,6 +44,6 @@ describe('app', () => {
   });
 
   it('renders', () => {
-    expect(app.find('App')).toBeDefined;
+    expect(app.find('App')).to.exist;
   });
 });

@@ -4,7 +4,7 @@ import * as actions from '../actions';
 
 export class CommentBox extends Component {
   static propTypes = {
-    saveComment: PropTypes.string.isRequired,
+    saveComment: PropTypes.func.isRequired,
   }
 
   state = {
