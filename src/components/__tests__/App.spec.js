@@ -18,12 +18,10 @@ describe('App', () => {
   });
 
   it('shows a comment box', () => {
-    expect(component.find('.comment-box')).not.toBeNull();
     expect(component.find('.comment-box').length).toBeGreaterThan(0);
   });
 
   it('shows a comment list', () => {
-    expect(component.find('.comment-list')).not.toBeNull();
     expect(component.find('.comment-list').length).toBeGreaterThan(0);
   });
 });
@@ -35,7 +33,7 @@ describe('app', () => {
     const store = createStore(reducers);
     app = shallow(
       <Provider store={store}>
-        <App />
+        <App/>
       </Provider>,
     );
   });
