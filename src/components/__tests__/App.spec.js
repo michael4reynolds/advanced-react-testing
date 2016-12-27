@@ -35,7 +35,7 @@ describe('app', () => {
     const store = createStore(reducers);
     app = shallow(
       <Provider store={store}>
-        <App />
+        <App/>
       </Provider>,
     );
   });
